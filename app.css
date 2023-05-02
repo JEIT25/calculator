@@ -8,7 +8,7 @@ body {
 
 .calculator-container {
     display: flex;
-    margin: 6rem 18rem;
+    margin: 4rem auto;
     width: 25%;
     height: 35rem;
     padding: 1.5rem 6rem;
@@ -21,11 +21,6 @@ body {
     margin-top: 2.5rem;
 }
 
-.calculator-container section {
-    display: flex;
-    flex-direction: row;
-    margin-top: 1em;
-}
 
 .calculator-container section .buttons {
     height: 4rem;

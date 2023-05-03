@@ -1,7 +1,6 @@
 let calculatorContainer = document.querySelector('form');
 let Buttons = document.querySelectorAll('button');
-calculatorContainer.addEventListener('submit', (evt) => { evt.stopPropagation() });
-
+calculatorContainer.addEventListener('submit', (evt) => { evt.preventDefault() });
 for (let i = 0; i < Buttons.length; i++) {
     if (i === 0) {
         Buttons[i].addEventListener('click', (evy) => {
@@ -33,7 +32,7 @@ for (let i = 0; i < Buttons.length; i++) {
         })
     } else if (i === 7) {
         Buttons[i].addEventListener('click', (evy) => {
-            calculatorContainer.elements[0].value += "x";
+            calculatorContainer.elements[0].value += "*";
         })
     } else if (i === 8) {
         Buttons[i].addEventListener('click', (evy) => {
@@ -77,7 +76,7 @@ for (let i = 0; i < Buttons.length; i++) {
         })
     } else if (i === 18) {
         Buttons[i].addEventListener('click', (evy) => {
-            calculatorContainer.elements[0].value = eval(calculatorContainer.elements[0].value);
+            calculatorContainer.elements.input.value = parseInt(eval(calculatorContainer.elements.input.value));
         })
     }
-};
+}
